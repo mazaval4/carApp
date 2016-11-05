@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ser401.carsystem.MainActivity"
+    android:background="@color/dim_foreground_material_dark">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:rowCount="5"
+        android:columnCount="6">
+
+        <ImageButton
+            android:layout_width="270dp"
+            android:layout_height="220dp"
+            android:id="@+id/phoneBtn"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:background="@mipmap/phone" />
+
+        <ImageButton
+            android:layout_width="270dp"
+            android:layout_height="220dp"
+            android:id="@+id/radioBtn"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:background="@mipmap/radio" />
+
+        <ImageButton
+            android:layout_width="270dp"
+            android:layout_height="220dp"
+            android:id="@+id/carBtn"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:background="@mipmap/car" />
+
+        <ImageButton
+            android:layout_width="270dp"
+            android:layout_height="220dp"
+            android:id="@+id/acBtn"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:background="@mipmap/ac" />
+
+        <ImageButton
+            android:layout_width="270dp"
+            android:layout_height="220dp"
+            android:id="@+id/gpsBtn"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:background="@mipmap/gps" />
+
+        <ImageButton
+            android:layout_width="270dp"
+            android:layout_height="220dp"
+            android:id="@+id/mediaBtn"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:background="@mipmap/media" />
+    </GridLayout>
+</RelativeLayout>

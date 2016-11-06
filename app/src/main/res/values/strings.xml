@@ -1,13 +1,3 @@
 <resources>
     <string name="app_name">CarSystem</string>
-    <string name="lowBeamToggle">Low Beam Toggle</string>
-    <string name="lowBeamOff">Low Beams Off</string>
-    <string name="lowBeamOn">Low Beams On</string>
-    <string name="highBeamOff">High Beams Off</string>
-    <string name="highBeamOn">High Beams On</string>
-    <string name="windowLevel">Window Level</string>
-    <string name="wiperOptions">Windshield Wiper Options</string>
-    <string name="wiperOn">Windshield Wiper On</string>
-    <string name="wiperOff">Windshield Wiper Off</string>
-    <string name="wiperText">Switch Mode</string>
 </resources>

@@ -18,4 +18,14 @@
     <string name="highToggleOff">High Beams Off</string>
     <string name="highToggleOn">High Beams On</string>
 
+    <string name="radio_text">Radio Options</string>
+    <string name="radio_switch">Modulation</string>
+    <string name="radio_am">AM</string>
+    <string name="radio_fm">FM</string>
+    <string name="channel_down">Channel Down</string>
+    <string name="channel_up">Channel Up</string>
+    <string name="volume_up">Volume Up</string>
+    <string name="volume_down">Volume Down</string>
+
+
 </resources>

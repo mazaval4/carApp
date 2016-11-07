@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".CarActivity" />
         <activity android:name=".WindowActivity" />
-        <activity android:name=".WiperActivity"></activity>
+        <activity android:name=".WiperActivity" />
+        <activity android:name=".RadioActivity" />
+        <activity android:name=".RadioActivity2"></activity>
     </application>
 
 </manifest>

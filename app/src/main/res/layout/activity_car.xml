@@ -76,7 +76,7 @@
         android:layout_alignTop="@+id/toggleLow"
         android:layout_alignLeft="@+id/wiperBtn"
         android:layout_alignStart="@+id/wiperBtn"
-        android:id="@+id/toggleButton2"
+        android:id="@+id/toggleHigh"
         android:textOff="@string/highToggleOff"
         android:textOn="@string/highToggleOn"
         android:layout_alignRight="@+id/wiperBtn"

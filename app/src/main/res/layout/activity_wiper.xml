@@ -14,7 +14,7 @@
         android:text="@string/wiper_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
+        android:id="@+id/wiper_text"
         android:textSize="30sp"
         android:textStyle="normal|bold"
         android:layout_alignParentTop="true"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
         android:id="@+id/wiper_back"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/wiper_text"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textStyle="normal|bold" />

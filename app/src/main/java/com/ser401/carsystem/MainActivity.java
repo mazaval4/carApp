@@ -21,22 +21,20 @@ public class MainActivity extends AppCompatActivity{
 
     public void setupCarActivity(){
         final ImageButton car_button = (ImageButton)findViewById(R.id.carBtn);
-        car_button.setOnTouchListener(new View.OnTouchListener() {
+        car_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent e) {
+            public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, CarActivity.class));
-                return true;
             }
         });
     }
 
     public void setupRadioActivity(){
         final ImageButton radio_button = (ImageButton)findViewById(R.id.radioBtn);
-        radio_button.setOnTouchListener(new View.OnTouchListener(){
+        radio_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent e){
+            public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, RadioActivity.class));
-                return true;
             }
         });
     }

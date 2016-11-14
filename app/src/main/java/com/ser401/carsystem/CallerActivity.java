@@ -33,6 +33,7 @@ public class CallerActivity extends AppCompatActivity {
         final Button zero = (Button)findViewById(R.id.caller_zero);
         final Button pound = (Button)findViewById(R.id.caller_pound);
         final Button delete = (Button)findViewById(R.id.caller_delete);
+        final Button deleteAll = (Button)findViewById(R.id.caller_deleteAll);
 
         one.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +113,12 @@ public class CallerActivity extends AppCompatActivity {
                 delete();
             }
         });
+        deleteAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteAll();
+            }
+        });
 
     }
 
@@ -148,6 +155,16 @@ public class CallerActivity extends AppCompatActivity {
         if (length > 0)
         {
             output.setText(output.getText().toString().subSequence(0, length - 1));
+        }
+    }
+
+    private void deleteAll()
+    {
+        final TextView output = (TextView) findViewById(R.id.caller_UserInput);
+
+        while (output.length() > 0)
+        {
+            delete();
         }
     }
 }

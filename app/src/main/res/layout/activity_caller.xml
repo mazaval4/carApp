@@ -146,5 +146,13 @@
         android:layout_alignRight="@id/caller_three"
         android:layout_alignBottom="@id/caller_UserInput"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/caller_deleteAll"
+        android:layout_alignBottom="@+id/caller_dialer"
+        android:layout_alignLeft="@+id/caller_pound"
+        android:text="Delete\nAll"/>
+
 </RelativeLayout>
 

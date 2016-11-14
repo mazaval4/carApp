@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ser401.carsystem">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +22,16 @@
         <activity android:name=".WiperActivity" />
         <activity android:name=".RadioActivity" />
         <activity android:name=".RadioActivity2" />
-        <activity android:name=".CallerActivity"></activity>
+        <activity android:name=".CallerActivity" />
+        <activity
+            android:name=".MapActivity"
+            android:label="@string/title_activity_map"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ser401.carsystem.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

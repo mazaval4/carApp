@@ -18,6 +18,17 @@ public class MainActivity extends AppCompatActivity{
         setupCarActivity();
         setupRadioActivity();
         setupCallerActivity();
+        setupMapActivity();
+    }
+
+    public void setupMapActivity(){
+        final ImageButton map_button = (ImageButton)findViewById(R.id.gpsBtn);
+        map_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MapActivity.class));
+            }
+        });
     }
 
     public void setupCallerActivity(){

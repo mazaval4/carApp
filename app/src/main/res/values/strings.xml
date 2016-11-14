@@ -26,6 +26,7 @@
     <string name="channel_up">Channel Up</string>
     <string name="volume_up">Volume Up</string>
     <string name="volume_down">Volume Down</string>
+    <string name="delete"><![CDATA[<]]></string>
 
 
 </resources>

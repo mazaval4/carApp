@@ -17,6 +17,17 @@ public class MainActivity extends AppCompatActivity{
 
         setupCarActivity();
         setupRadioActivity();
+        setupCallerActivity();
+    }
+
+    public void setupCallerActivity(){
+        final ImageButton phone_button = (ImageButton)findViewById(R.id.phoneBtn);
+        phone_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, CallerActivity.class));
+            }
+        });
     }
 
     public void setupCarActivity(){

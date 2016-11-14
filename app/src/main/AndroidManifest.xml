@@ -19,7 +19,8 @@
         <activity android:name=".WindowActivity" />
         <activity android:name=".WiperActivity" />
         <activity android:name=".RadioActivity" />
-        <activity android:name=".RadioActivity2"></activity>
+        <activity android:name=".RadioActivity2" />
+        <activity android:name=".CallerActivity"></activity>
     </application>
 
 </manifest>

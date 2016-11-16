@@ -22,125 +22,121 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_one"
         android:layout_alignBottom="@+id/caller_two"
-        android:layout_marginRight="50dp"
-        android:text="1" />
+        android:layout_marginRight="60dp"
+        android:text="1\n" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"
         android:id="@+id/caller_two"
-        android:text="2"
+        android:text="2\nABC"
         android:layout_below="@+id/caller_UserInput"/>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_three"
         android:layout_alignBottom="@+id/caller_two"
         android:layout_toRightOf="@+id/caller_two"
-        android:layout_marginLeft="50dp"
-        android:text="3" />
+        android:layout_marginLeft="60dp"
+        android:text="3\nDEF" />
 
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
         android:layout_below="@+id/caller_one"
         android:id="@+id/caller_four"
         android:layout_alignLeft="@+id/caller_one"
-        android:text="4" />
+        android:text="4\nGHI" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_five"
         android:layout_alignBottom="@+id/caller_four"
         android:layout_alignLeft="@+id/caller_two"
-        android:text="5" />
+        android:text="5\nJKL" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_six"
         android:layout_alignBottom="@+id/caller_five"
         android:layout_alignLeft="@+id/caller_three"
-        android:text="6" />
+        android:text="6\nMNO" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
         android:layout_below="@+id/caller_four"
         android:id="@+id/caller_seven"
         android:layout_alignLeft="@+id/caller_four"
-        android:text="7" />
+        android:text="7\nPQRS" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_eight"
         android:layout_alignBottom="@+id/caller_seven"
         android:layout_toRightOf="@+id/caller_seven"
         android:layout_alignLeft="@+id/caller_five"
-        android:text="8" />
+        android:text="8\nTUV" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_nine"
         android:layout_alignBottom="@+id/caller_eight"
         android:layout_alignLeft="@+id/caller_six"
-        android:text="9" />
+        android:text="9\nWXYZ" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
         android:id="@+id/caller_asterisk"
         android:text="*"
         android:layout_below="@+id/caller_seven"
-        android:layout_alignLeft="@+id/caller_seven"
-        android:layout_alignStart="@+id/caller_seven" />
+        android:layout_alignLeft="@+id/caller_seven" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_zero"
         android:text="0"
-        android:layout_alignBaseline="@+id/caller_asterisk"
         android:layout_alignBottom="@+id/caller_asterisk"
         android:layout_alignLeft="@+id/caller_eight"
         android:layout_alignStart="@+id/caller_eight" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_pound"
         android:text="#"
-        android:layout_alignBaseline="@+id/caller_zero"
         android:layout_alignBottom="@+id/caller_zero"
-        android:layout_alignLeft="@+id/caller_nine"
-        android:layout_alignStart="@+id/caller_nine" />
+        android:layout_alignLeft="@+id/caller_nine" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_dialer"
         android:text="Call"
         android:layout_alignLeft="@id/caller_zero"
         android:layout_below="@id/caller_zero"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:textAllCaps="false"/>
 
     <Button
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:id="@+id/caller_delete"
         android:text="@string/delete"
         android:layout_alignRight="@id/caller_three"
@@ -148,11 +144,62 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/caller_deleteAll"
         android:layout_alignBottom="@+id/caller_dialer"
         android:layout_alignLeft="@+id/caller_pound"
         android:text="Delete\nAll"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/caller_delete"
+        android:layout_toRightOf="@+id/caller_delete"
+        android:layout_marginLeft="94dp"
+        android:layout_marginStart="94dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/caller_contacts"
+        android:verticalScrollbarPosition="right"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_alignBottom="@+id/caller_deleteAll">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_one" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_two" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_three" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_four" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_five" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_six" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:id="@+id/caller_contact_seven" />
+    </LinearLayout>
 
 </RelativeLayout>
 

@@ -35,105 +35,116 @@ public class CallerActivity extends AppCompatActivity {
     private void onClickActivities()
     {
         final Button one = (Button)findViewById(R.id.caller_one);
-        final Button two = (Button)findViewById(R.id.caller_two);
-        final Button three = (Button)findViewById(R.id.caller_three);
-        final Button four = (Button)findViewById(R.id.caller_four);
-        final Button five = (Button)findViewById(R.id.caller_five);
-        final Button six = (Button)findViewById(R.id.caller_six);
-        final Button seven = (Button)findViewById(R.id.caller_seven);
-        final Button eight = (Button)findViewById(R.id.caller_eight);
-        final Button nine = (Button)findViewById(R.id.caller_nine);
-        final Button asterisk = (Button)findViewById(R.id.caller_asterisk);
-        final Button zero = (Button)findViewById(R.id.caller_zero);
-        final Button pound = (Button)findViewById(R.id.caller_pound);
-        final Button delete = (Button)findViewById(R.id.caller_delete);
-        final Button deleteAll = (Button)findViewById(R.id.caller_deleteAll);
-
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('1');
             }
         });
+
+        final Button two = (Button)findViewById(R.id.caller_two);
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('2');
             }
         });
+
+        final Button three = (Button)findViewById(R.id.caller_three);
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('3');
             }
         });
+
+        final Button four = (Button)findViewById(R.id.caller_four);
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('4');
             }
         });
+
+        final Button five = (Button)findViewById(R.id.caller_five);
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('5');
             }
         });
+
+        final Button six = (Button)findViewById(R.id.caller_six);
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('6');
             }
         });
+
+        final Button seven = (Button)findViewById(R.id.caller_seven);
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('7');
             }
         });
+
+        final Button eight = (Button)findViewById(R.id.caller_eight);
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('8');
             }
         });
+
+        final Button nine = (Button)findViewById(R.id.caller_nine);
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('9');
             }
         });
+
+        final Button asterisk = (Button)findViewById(R.id.caller_asterisk);
         asterisk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('*');
             }
         });
+
+        final Button zero = (Button)findViewById(R.id.caller_zero);
         zero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('0');
             }
         });
+
+        final Button pound = (Button)findViewById(R.id.caller_pound);
         pound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 update('#');
             }
         });
+
+        final Button delete = (Button)findViewById(R.id.caller_delete);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 delete();
             }
         });
+
+        final Button deleteAll = (Button)findViewById(R.id.caller_deleteAll);
         deleteAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 deleteAll();
             }
         });
-
     }
 
     private void update(char input)
@@ -170,10 +181,13 @@ public class CallerActivity extends AppCompatActivity {
     {
         final TextView output = (TextView) findViewById(R.id.caller_UserInput);
 
+        //Remove everything in 'output'
         while (output.length() > 0)
         {
             delete();
         }
+
+        //Restore the search result of the contactList
         allContacts();
     }
 
@@ -192,6 +206,7 @@ public class CallerActivity extends AppCompatActivity {
 
     private void allContacts()
     {
+        //print all contacts
         for (int i = 0; i < contacts.size(); i ++)
         {
             contactList.get(i).setText(contacts.get(i));
@@ -200,68 +215,98 @@ public class CallerActivity extends AppCompatActivity {
 
     private void updateContacts(String searchTerm)
     {
+        //Print all contacts and quit if the textView is empty
         if (searchTerm.isEmpty())
         {
             allContacts();
             return;
         }
 
+        //Declare a list to be used to store results
         List<String> results = new ArrayList<>();
+        //Convert searchTerm to char array for compare purpose
         char[] searchTerms = searchTerm.toCharArray();
 
+        //Loop through the contacts list to check every contact
         for (int i = 0; i < contacts.size(); i++)
         {
+            //Convert the contact string into char array
             char[] toCheck = contacts.get(i).toCharArray();
 
-            if (checkCharArrays(searchTerms, toCheck, 0, 0))
+            //Compare the char arrays
+            if (checkCharArrays(searchTerms, toCheck))
             {
                 results.add(contacts.get(i));
             }
         }
 
-        if(!results.isEmpty())
+        //Print out the search results
+        for (int i = 0; i < results.size(); i++)
         {
-            for (int i = 0; i < results.size(); i++)
-            {
-                contactList.get(i).setText(results.get(i));
-            }
-
-            for (int i = results.size() - 1; i < contactList.size(); i++)
-            {
-                contactList.get(i).setText("");
-            }
-        }
-        else
-        {
-            for (int i = 0; i < contactList.size(); i++)
-            {
-                contactList.get(i).setText("");
-            }
+            contactList.get(i).setText(results.get(i));
         }
 
+        //Clear of the rest of the boxes
+        for (int i = results.size(); i < contactList.size(); i++)
+        {
+            contactList.get(i).setText("");
+        }
     }
 
-    private boolean checkCharArrays(char[] searchTerm, char[] toCheck, int searchStart, int checkStart)
+    private boolean checkCharArrays(char[] searchTerm, char[] toCheck)
     {
-
-        if (searchTerm[searchStart] == toCheck[checkStart])
-        {
-            if (searchStart + 1 == searchTerm.length)
-            {
-                return true;
-            }
-            else if (checkCharArrays(searchTerm, toCheck, checkStart + 1, searchStart + 1))
-            {
-                return true;
-            }
-            else
-            {
-                return checkCharArrays(searchTerm, toCheck, 0, searchStart + 1);
-            }
-        }
-        else
+        //Check if the given searchTerm is longer than toCheck
+        if (searchTerm.length > toCheck.length)
         {
             return false;
+        }
+
+        //Check through the searchTerm through toCheck
+        for (int i = 0; i < searchTerm.length; i ++)
+        {
+            //Return false if any character turns out to not match
+            if (!ifEquals(searchTerm[i], toCheck[i]))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    //Comparing the user input with actual characters
+    private boolean ifEquals(char input, char toSearch)
+    {
+        //Make sure all characters to be checked are in upper case
+        toSearch = Character.toUpperCase(toSearch);
+
+        switch (input)
+        {
+            //Check the characters according to the input as intended
+            case '2':
+                return (toSearch == 'A' || toSearch == 'B' || toSearch == 'C');
+            case '3':
+                return (toSearch == 'D' || toSearch == 'E' || toSearch == 'F');
+            case '4':
+                return (toSearch == 'G' || toSearch == 'H' || toSearch == 'I');
+            case '5':
+                return (toSearch == 'J' || toSearch == 'K' || toSearch == 'L');
+            case '6':
+                return (toSearch == 'M' || toSearch == 'N' || toSearch == 'O');
+            case '7':
+                return (toSearch == 'P' || toSearch == 'Q' || toSearch == 'R' || toSearch == 'S');
+            case '8':
+                return (toSearch == 'T' || toSearch == 'U' || toSearch == 'V');
+            case '9':
+                return (toSearch == 'W' || toSearch == 'X' || toSearch == 'Y' || toSearch == 'Z');
+
+            //Characters / Numbers not associated with any actual character will return false
+            case '1':
+            case '0':
+            case '*':
+            case '#':
+            default:
+                return false;
         }
     }
 }

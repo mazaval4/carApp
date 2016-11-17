@@ -23,6 +23,7 @@
         <activity android:name=".RadioActivity" />
         <activity android:name=".RadioActivity2" />
         <activity android:name=".CallerActivity" />
+        <activity android:name=".AcActivity" />
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map"

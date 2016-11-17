@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity{
         setupRadioActivity();
         setupCallerActivity();
         setupMapActivity();
+        setupAcActivity();
     }
 
     public void setupMapActivity(){
@@ -57,6 +58,16 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, RadioActivity.class));
+            }
+        });
+    }
+
+    public void setupAcActivity(){
+        final ImageButton ac_button = (ImageButton)findViewById(R.id.acBtn);
+        ac_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AcActivity.class));
             }
         });
     }

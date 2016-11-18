@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity{
         setupCallerActivity();
         setupMapActivity();
         setupAcActivity();
+        setupMediaActivity();
     }
 
     public void setupMapActivity(){
@@ -68,6 +69,15 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, AcActivity.class));
+            }
+        });
+    }
+    public void setupMediaActivity(){
+        final ImageButton media_button = (ImageButton)findViewById(R.id.mediaBtn);
+        media_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
             }
         });
     }

@@ -28,6 +28,7 @@
     <string name="volume_down">Volume Down</string>
     <string name="delete"><![CDATA[<]]></string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_browse">BrowseActivity</string>
 
 
 </resources>

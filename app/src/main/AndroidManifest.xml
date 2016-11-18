@@ -33,6 +33,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ser401.carsystem.MainActivity" />
         </activity>
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".BrowseActivity"
+            android:label="@string/title_activity_browse"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BlueActivity" />
+        <activity android:name=".UsbActivity" />
+        <activity android:name=".SourcesActivity"></activity>
     </application>
 
 </manifest>
